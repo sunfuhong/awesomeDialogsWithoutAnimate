@@ -12,7 +12,7 @@ import 'package:awesome_dialog/awesome_dialog.dart';
 ## Demo
 Check out <https://cv.toranzo.dev/awesome-dialog> for more fun.
 ## Image
-## Source Look                                                                          Now Look
+## Difference
 ![alt text](doc/gif.gif) ![alt text](doc/recording.gif)
 
 ### Example
