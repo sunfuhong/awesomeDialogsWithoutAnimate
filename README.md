@@ -1,6 +1,6 @@
 # awesome_dialog
 
-A new Flutter package project for simple and awesome dialogs
+awesomeDialogsWithoutAnimate is a fork and remove rive(Difficulty compiling) from awsomeDialogs
 
 ## Usage
 
