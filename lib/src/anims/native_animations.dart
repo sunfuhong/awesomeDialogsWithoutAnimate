@@ -10,6 +10,7 @@ enum AnimType {
   rightSlide,
   bottomSlide,
   topSlide,
+  none,
 }
 
 ///

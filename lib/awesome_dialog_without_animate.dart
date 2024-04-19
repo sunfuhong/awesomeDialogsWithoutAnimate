@@ -1,10 +1,10 @@
-import 'src/animated_button.dart';
-import 'src/anims/native_animations.dart';
+// TODO Implement this library.import 'src/animated_button.dart';
+// import 'awesome_dialog.dart';
+import 'package:awesome_dialog_without_animate/awesome_dialog_without_animate.dart';
 
-import 'src/vertical_stack_header_dialog.dart';
+import 'package:awesome_dialog_without_animate/src/vertical_stack_header_dialog.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-
 export 'src/animated_button.dart';
 export 'src/anims/native_animations.dart';
 
@@ -250,8 +250,12 @@ class AwesomeDialog {
           Animation<double> animation,
           Animation<double> secondaryAnimation,
           Widget child,
-        ) =>
-            _showAnimation(animation, secondaryAnimation, child),
+        ) {
+          // 尝试获取动画效果
+          final animatedChild = _showAnimation(animation, secondaryAnimation, child);
+          // 如果_showAnimation返回null，则直接返回child，否则返回动画效果
+          return animatedChild ?? child; /*_showAnimation(animation, secondaryAnimation, child);*/
+        },
         barrierColor: barrierColor ?? const Color(0x80000000),
         barrierLabel: MaterialLocalizations.of(context).modalBarrierDismissLabel,
       )..then<dynamic>(
@@ -329,7 +333,7 @@ class AwesomeDialog {
   }
 
   /// Shows alert with selected animation
-  Widget _showAnimation(
+  Widget? _showAnimation(
     Animation<double> animation,
     Animation<double> secondaryAnimation,
     Widget child,
@@ -365,6 +369,8 @@ class AwesomeDialog {
           secondaryAnimation,
           child,
         );
+      case AnimType.none:
+        return null;
     }
   }
 
