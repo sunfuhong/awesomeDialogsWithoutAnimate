@@ -50,9 +50,9 @@ class AnimatedButton extends StatefulWidget {
   State<AnimatedButton> createState() => _AnimatedButtonState();
 }
 
-class _AnimatedButtonState extends State<AnimatedButton>
-    with SingleTickerProviderStateMixin {
-  static const int _forwardDurationNumber = 150;
+class _AnimatedButtonState extends State<AnimatedButton> with SingleTickerProviderStateMixin {
+  /*static const int _forwardDurationNumber = 150;*/
+  static const int _forwardDurationNumber = 50;
   late AnimationController _animationController;
   late Animation<double> _scale;
 
@@ -62,7 +62,8 @@ class _AnimatedButtonState extends State<AnimatedButton>
     _animationController = AnimationController(
       vsync: this,
       duration: const Duration(milliseconds: _forwardDurationNumber),
-      reverseDuration: const Duration(milliseconds: 100),
+      /*reverseDuration: const Duration(milliseconds: 100),*/
+      reverseDuration: const Duration(milliseconds: 10),
     )..addStatusListener(
         _animationStatusListener,
       );
