@@ -1,13 +1,12 @@
 import 'package:awesome_dialog/src/animated_button.dart';
 import 'package:awesome_dialog/src/anims/native_animations.dart';
-import 'package:awesome_dialog/src/header.dart';
+
 import 'package:awesome_dialog/src/vertical_stack_header_dialog.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
 export 'src/animated_button.dart';
 export 'src/anims/native_animations.dart';
-export 'src/header.dart';
 
 ///Main class for creating a dialog
 class AwesomeDialog {
@@ -254,12 +253,9 @@ class AwesomeDialog {
         ) =>
             _showAnimation(animation, secondaryAnimation, child),
         barrierColor: barrierColor ?? const Color(0x80000000),
-        barrierLabel:
-            MaterialLocalizations.of(context).modalBarrierDismissLabel,
+        barrierLabel: MaterialLocalizations.of(context).modalBarrierDismissLabel,
       )..then<dynamic>(
-          (dynamic value) => _onDismissCallbackCalled
-              ? null
-              : onDismissCallback?.call(_dismissType),
+          (dynamic value) => _onDismissCallbackCalled ? null : onDismissCallback?.call(_dismissType),
         );
 
   /// Return the header of the dialog
@@ -270,10 +266,11 @@ class AwesomeDialog {
     if (dialogType == DialogType.noHeader) {
       return null;
     }
-    return AwesomeDialogHeader(
+    return null;
+    /*return AwesomeDialogHeader(
       loop: headerAnimationLoop,
       dialogType: dialogType,
-    );
+    );*/
   }
 
   /// Returns the body of the dialog
@@ -298,8 +295,7 @@ class AwesomeDialog {
             padding: padding ?? const EdgeInsets.only(left: 5, right: 5),
             bodyHeaderDistance: bodyHeaderDistance,
             btnOk: btnOk ?? (btnOkOnPress != null ? _buildFancyButtonOk : null),
-            btnCancel: btnCancel ??
-                (btnCancelOnPress != null ? _buildFancyButtonCancel : null),
+            btnCancel: btnCancel ?? (btnCancelOnPress != null ? _buildFancyButtonCancel : null),
             showCloseIcon: showCloseIcon,
             onClose: () {
               _dismissType = DismissType.topIcon;
@@ -319,8 +315,7 @@ class AwesomeDialog {
             focusNode: FocusNode(),
             autofocus: true,
             onKey: (RawKeyEvent event) {
-              if (event.isKeyPressed(LogicalKeyboardKey.enter) ||
-                  event.isKeyPressed(LogicalKeyboardKey.numpadEnter)) {
+              if (event.isKeyPressed(LogicalKeyboardKey.enter) || event.isKeyPressed(LogicalKeyboardKey.numpadEnter)) {
                 if (btnOk == null && btnOkOnPress != null) {
                   _dismissType = DismissType.btnOk;
                   dismiss();
