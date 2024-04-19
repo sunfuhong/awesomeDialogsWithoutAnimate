@@ -1,13 +1,13 @@
-# awesome_dialog
+# awesome_dialog_without_rive
 
-awesomeDialogsWithoutAnimate is a fork and remove rive(Difficulty compiling) from awsomeDialogs
+awesomeDialogsWithoutRive is a fork and remove rive(Difficulty compiling) from awsomeDialogs<https://pub.dev/packages/awesome_dialog>
 
 ## Usage
 
-To use this package, add awesome_dialog as a dependency in your pubspec.yaml file.
+To use this package, add awesome_dialog_without_rive as a dependency in your pubspec.yaml file.
 And add this import to your file.
 
-import 'package:awesome_dialog/awesome_dialog.dart';
+import 'package:awesome_dialog_without_animate/awesome_dialog.dart';
 
 ## Demo
 Check out <https://cv.toranzo.dev/awesome-dialog> for more fun.

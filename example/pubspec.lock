@@ -9,13 +9,13 @@ packages:
       url: "https://pub.flutter-io.cn"
     source: hosted
     version: "2.11.0"
-  awesome_dialog:
+  awesome_dialog_without_animate:
     dependency: "direct main"
     description:
       path: ".."
       relative: true
     source: path
-    version: "3.2.0"
+    version: "3.2.1"
   boolean_selector:
     dependency: transitive
     description:

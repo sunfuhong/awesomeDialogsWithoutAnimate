@@ -1,11 +1,12 @@
-name: awesome_dialog
+name: awesome_dialog_without_animate
 description: >-
-  Flutter package to show beautiful dialogs(INFO,QUESTION,WARNING,SUCCESS,ERROR) with animations as simply as possible.
-version: 3.2.0
-homepage: https://github.com/marcos930807/awesomeDialogs
+  This project is a fork from awesome_dialog,【JUST REMOVE RIVE!】Because of rive, I can't compile my projects and always failed, so i removed rive form the awesome_dialog. Flutter package to show beautiful dialogs(INFO,QUESTION,WARNING,SUCCESS,ERROR) with animations as simply as possible.
+version: 3.2.1
+homepage: https://github.com/sunfuhong/awesomeDialogsWithoutAnimate
 
 environment:
-  sdk: ">=2.12.0 <3.0.0"
+#  sdk: ">=2.12.0 <3.0.0"
+  sdk: '>=2.12.0 <4.0.0'
 
 dependencies:
   flutter:

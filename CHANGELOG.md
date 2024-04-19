@@ -1,3 +1,5 @@
+## [3.2.1] - 02/01/2024
+* Remove rive dependency. 
 ## [3.2.0] - 02/01/2024
 
 * Upgrade dependencies.

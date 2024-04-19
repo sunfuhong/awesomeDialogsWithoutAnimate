@@ -1,5 +1,5 @@
-import 'package:awesome_dialog/awesome_dialog.dart';
 import 'package:flutter/material.dart';
+import 'package:awesome_dialog_without_animate/awesome_dialog_without_animate.dart';
 
 void main() => runApp(const MyApp());
 
@@ -8,11 +8,7 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-        title: 'Fancy Dialog Example',
-        theme: ThemeData.dark(),
-        initialRoute: '/',
-        home: HomePage());
+    return MaterialApp(title: 'Fancy Dialog Example', theme: ThemeData.dark(), initialRoute: '/', home: HomePage());
   }
 }
 
@@ -106,8 +102,7 @@ class _HomePageState extends State<HomePage> {
                       reverseBtnOrder: true,
                       btnOkOnPress: () {},
                       btnCancelOnPress: () {},
-                      desc:
-                          'Lorem ipsum dolor sit amet consectetur adipiscing elit eget ornare tempus, vestibulum sagittis rhoncus felis hendrerit lectus ultricies duis vel, id morbi cum ultrices tellus metus dis ut donec. Ut sagittis viverra venenatis eget euismod faucibus odio ligula phasellus,',
+                      desc: 'Lorem ipsum dolor sit amet consectetur adipiscing elit eget ornare tempus, vestibulum sagittis rhoncus felis hendrerit lectus ultricies duis vel, id morbi cum ultrices tellus metus dis ut donec. Ut sagittis viverra venenatis eget euismod faucibus odio ligula phasellus,',
                     ).show();
                   },
                 ),
@@ -126,8 +121,7 @@ class _HomePageState extends State<HomePage> {
                       showCloseIcon: true,
                       closeIcon: const Icon(Icons.close_fullscreen_outlined),
                       title: 'Warning',
-                      desc:
-                          'Dialog description here..................................................',
+                      desc: 'Dialog description here..................................................',
                       btnCancelOnPress: () {},
                       onDismissCallback: (type) {
                         debugPrint('Dialog Dismiss from callback $type');
@@ -149,8 +143,7 @@ class _HomePageState extends State<HomePage> {
                       animType: AnimType.rightSlide,
                       headerAnimationLoop: false,
                       title: 'Error',
-                      desc:
-                          'Dialog description here..................................................',
+                      desc: 'Dialog description here..................................................',
                       btnOkOnPress: () {},
                       btnOkIcon: Icons.cancel,
                       btnOkColor: Colors.red,
@@ -170,8 +163,7 @@ class _HomePageState extends State<HomePage> {
                       animType: AnimType.rightSlide,
                       headerAnimationLoop: true,
                       title: 'Question',
-                      desc:
-                          'Dialog description here..................................................',
+                      desc: 'Dialog description here..................................................',
                       btnOkOnPress: () {},
                     ).show();
                   },
@@ -190,8 +182,7 @@ class _HomePageState extends State<HomePage> {
                       dialogType: DialogType.success,
                       showCloseIcon: true,
                       title: 'Succes',
-                      desc:
-                          'Dialog description here..................................................',
+                      desc: 'Dialog description here..................................................',
                       btnOkOnPress: () {
                         debugPrint('OnClcik');
                       },
@@ -214,8 +205,7 @@ class _HomePageState extends State<HomePage> {
                       headerAnimationLoop: false,
                       dialogType: DialogType.noHeader,
                       title: 'No Header',
-                      desc:
-                          'Dialog description here..................................................',
+                      desc: 'Dialog description here..................................................',
                       btnOkOnPress: () {
                         debugPrint('OnClcik');
                       },
@@ -282,8 +272,7 @@ class _HomePageState extends State<HomePage> {
                       btnOkText: "Yes, I will pay",
                       title: 'Continue to pay?',
                       // padding: const EdgeInsets.all(5.0),
-                      desc:
-                          'Please confirm that you will pay 3000 INR within 30 mins. Creating orders without paying will create penalty charges, and your account may be disabled.',
+                      desc: 'Please confirm that you will pay 3000 INR within 30 mins. Creating orders without paying will create penalty charges, and your account may be disabled.',
                       btnCancelOnPress: () {},
                       btnOkOnPress: () {},
                     ).show();

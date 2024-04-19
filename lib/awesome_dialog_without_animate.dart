@@ -1,7 +1,7 @@
-import 'package:awesome_dialog/src/animated_button.dart';
-import 'package:awesome_dialog/src/anims/native_animations.dart';
+import 'package:awesome_dialog_without_animate/src/animated_button.dart';
+import 'package:awesome_dialog_without_animate/src/anims/native_animations.dart';
 
-import 'package:awesome_dialog/src/vertical_stack_header_dialog.dart';
+import 'package:awesome_dialog_without_animate/src/vertical_stack_header_dialog.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
